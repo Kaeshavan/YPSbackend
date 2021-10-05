@@ -176,7 +176,7 @@ app.post('/api/getdata', (req, res)=> {
     });
 })
 
-app.listen(3030, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log("This is running on port 3030");
 });
 
