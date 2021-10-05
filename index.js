@@ -20,12 +20,13 @@ app.all('*', function(req, res, next) {
 });
 
 const db = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'ypssurvey'
+    host: 'eu-cdbr-west-01.cleardb.com',
+    user: 'b7d0c91ff243da',
+    password: '18a1d344',
+    database: 'heroku_dafce818280299d'
 });
 
+mysql://b7d0c91ff243da:18a1d344@eu-cdbr-west-01.cleardb.com/heroku_dafce818280299d?
 
 
 app.use(express.json());
