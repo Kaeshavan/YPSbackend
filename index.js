@@ -391,7 +391,7 @@ app.post('/login', (req, res)=>{
     );
 })
 
-app.post('/api/getdata', (req, res)=> {
+app.post('/getdata', (req, res)=> {
     const PID = req.body.PID
 
     const sqlgetData = "SELECT * FROM surveydata WHERE PID = ?;"
@@ -400,9 +400,9 @@ app.post('/api/getdata', (req, res)=> {
     });
 })
 
-// app.listen(3030, () => {
-//     console.log("This is running on port 3030");
-// });
+app.listen(3030, () => {
+    console.log("This is running on port 3030");
+});
 
 
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 3030;
