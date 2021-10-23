@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.put('/api/save', (req, res)=>{
+app.put('/save', (req, res)=>{
 
     const SID =  req.body.SID
     const PID = req.body.PID
@@ -180,7 +180,7 @@ app.put('/api/save', (req, res)=>{
 })
 
 
-app.put('/api/submission', (req, res)=>{
+app.put('/submission', (req, res)=>{
 
     const SID =  req.body.SID
     const PID = req.body.PID
@@ -328,7 +328,7 @@ app.put('/api/submission', (req, res)=>{
     db.query(sqlInsert2, [PID], (err, result)=> {console.log(err)});
 })
 
-app.post('/api/signup', (req, res)=>{
+app.post('/signup', (req, res)=>{
 
     const email = req.body.email
     const password =  req.body.password
@@ -367,7 +367,7 @@ app.post('/api/signup', (req, res)=>{
     
 })
 
-app.post('/api/login', (req, res)=>{
+app.post('/login', (req, res)=>{
 
     const email = req.body.email
     const password =  req.body.password
